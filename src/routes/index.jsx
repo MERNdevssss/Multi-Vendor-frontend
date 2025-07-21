@@ -9,12 +9,17 @@ import AdminRoutes from './AdminRoutes';
 import Login from '../components/pages/LoginPage/LoginPage';
 import Register from '../components/pages/RegisterPage/RegisterPage';
 import VendorRoutes from './VendorRoutes';
+import LandingPage from '../components/pages/LandingPage/LandingPage';
+
 import ProductPage from "../components/pages/ProductPage/ProductPage";
 import PricingPage from '../components/pages/PricePage/PricePage';
 
 const AppRoutes = () => {
   return (
     <Routes>
+
+    <Route path='/' element={<LandingPage />} />
+
       {/* Authentication Routes */}
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
