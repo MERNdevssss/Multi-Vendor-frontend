@@ -1,18 +1,28 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import {
+  LayoutDashboard,
+  Users,
+  ShoppingCart,
+  Store,
+  BarChart2,
+  Settings,
+  Bell,
+  User
+} from "lucide-react"; // Import Lucide icons
 
 export default function Sidebar({ activeTab, isOpen, onClose }) {
   const navigate = useNavigate();
 
   const menuItems = [
-    { key: "Dashboard", icon: "/src/assets/Sidebar/Dashboard.png", path: "/admin/dashboard" },
-    { key: "Customers", icon: "/src/assets/Sidebar/Customers.png", path: "/admin/customers" },
-    { key: "Orders", icon: "/src/assets/Sidebar/orders.png", path: "/admin/orders" },
-    { key: "Vendors", icon: "/src/assets/Sidebar/vendors.jpg", path: "/admin/vendors" },
-    { key: "Reports", icon: "/src/assets/Sidebar/Reports.png", path: "/admin/reports" },
-    { key: "Settings", icon: "/src/assets/Sidebar/Settings.png", path: "/admin/settings" },
-    { key: "Notifications", icon: "/src/assets/Sidebar/notification.png", path: "/admin/notifications" },
-    { key: "Profile", icon: "/src/assets/Sidebar/profile.jpg", path: "/admin/profile" },
+    { key: "Dashboard", icon: <LayoutDashboard size={20} />, path: "/admin/dashboard" },
+    { key: "Customers", icon: <Users size={20} />, path: "/admin/customers" },
+    { key: "Orders", icon: <ShoppingCart size={20} />, path: "/admin/orders" },
+    { key: "Vendors", icon: <Store size={20} />, path: "/admin/vendors" },
+    { key: "Reports", icon: <BarChart2 size={20} />, path: "/admin/reports" },
+    { key: "Settings", icon: <Settings size={20} />, path: "/admin/settings" },
+    { key: "Notifications", icon: <Bell size={20} />, path: "/admin/notifications" },
+    { key: "Profile", icon: <User size={20} />, path: "/admin/profile" },
   ];
 
   return (
@@ -53,11 +63,7 @@ export default function Sidebar({ activeTab, isOpen, onClose }) {
                 onClose();
               }}
             >
-              <img
-                src={item.icon}
-                alt={item.key}
-                className="w-5 h-5 mr-3 object-contain dark:invert"
-              />
+              <span className="mr-3">{item.icon}</span>
               <span>{item.key}</span>
             </li>
           ))}

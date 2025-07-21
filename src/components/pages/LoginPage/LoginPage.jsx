@@ -9,7 +9,7 @@ const Login = () => {
           {/* Left Image */}
           <div className="w-full md:w-[600px] flex justify-center">
             <img
-              src="./src/assets/LoginImage.png" 
+              src="https://media.istockphoto.com/id/1279002529/photo/long-haul-semi-truck-on-a-rural-western-usa-interstate-highway.jpg?s=612x612&w=0&k=20&c=whigLZsLjC6BLRWcEMdgqRt-sZk70T39U0tEDg7NVss=" 
               alt="Delivery Truck"
               className="rounded-2xl w-full  h-80 md:h-[380px] rounded-t-2xl object-cover"
             />
